@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# run this file like that: ./lab3q1 50 32 1 4 2 7 250 142
+
+nums=("$@") # storing the arguments in array
+n=${#nums[@]} #size of the array
+
+# bubble sort
+for ((i = 0; i < n-1; i++)); do
+    for ((j = 0; j < n-i-1; j++)); do
+        if ((nums[j] > nums[j+1])); then
+            # Swap numbers
+            temp=${nums[j]}
+            nums[j]=${nums[j+1]}
+            nums[j+1]=$temp
+        fi
+    done
+done
+
+# printing the sorted array
+for i in "${nums[*]}"; do
+    echo "$i"
+done

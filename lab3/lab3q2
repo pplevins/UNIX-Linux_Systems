@@ -1,0 +1,77 @@
+#!/bin/bash
+
+line_flag=false
+word_flag=false
+char_flag=false
+
+if [[ $1 =~ ^-.$ ]]; then #if the 1st parameter is flag
+        case $1 in
+                -l) line_flag=true ;;
+                -w) word_flag=true ;;
+                -c) char_flag=true ;;
+                *) echo "error" && exit 1 ;;
+        esac
+fi
+
+if [[ $1 != -* ]]; then #if the 1st parameter is not a flag
+        line_flag=true
+        word_flag=true
+        char_flag=true
+fi
+
+count_lines_words_chars() { #function to count the files
+        line_count=0
+        word_count=0
+        char_count=0
+
+        while read line; do
+                ((line_count++))
+                char_count=$((char_count + ${#line} + 1)) #adding the number of chars in the line
+                words=($line)
+                word_count=$((word_count + ${#words[@]})) 
+        done < $1
+
+        if $line_flag; then
+                printf "%4d" $line_count
+        fi
+
+        if $word_flag; then
+                printf "%4d" $word_count
+        fi
+
+        if $char_flag; then
+                printf "%4d" $char_count
+        fi
+
+        echo " $1"
+}
+
+
+total_lines=0
+total_words=0
+total_chars=0
+
+for file in "$@"; do
+        if [ -f "$file" ]; then
+                count_lines_words_chars "$file"
+                counts=$(count_lines_words_chars "$file")
+                read -r lines words chars filename <<< "$counts"
+                total_lines=$((total_lines + lines))
+                total_words=$((total_words + words))
+                total_chars=$((total_chars + chars))
+        fi
+done
+
+if $line_flag; then
+        printf "%4d" $total_lines
+fi
+
+if $word_flag; then
+        printf "%4d" $total_words
+fi
+
+if $char_flag; then
+        printf "%4d" $total_chars
+fi
+
+echo " total"

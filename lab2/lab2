@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#Question 1
+who | cut -d' ' -f1 | sort | uniq
+
+#Question 2
+for file in *; do
+  if [ -x "$file" -a -f "$file" -a "$file" != "lab2" ]; then
+    ./$file
+  fi
+done
+
+#Question 4
+grep -n "^#include" * | grep ":1:" | cut -d: -f1
+
+#Question 5
+for file in ./*; do
+  if [ -f $file ]; then
+    echo "I WAS HERE" >> $file;
+  fi
+done
+
+#Question 6
+find -type d -or -type f

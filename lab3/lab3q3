@@ -1,0 +1,17 @@
+#!/bin/awk -f
+
+# run the file like that: ./lab3q3 file_Q3
+
+BEGIN {
+  FS = ","
+}
+
+$1 >= 30 {
+  sum[$2]+=$1
+  count[$2]++
+}
+
+END {
+  for (course in sum)
+    print "Course " course ": Average grade = " sum[course]/count[course]
+}
