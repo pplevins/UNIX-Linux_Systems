@@ -1,6 +1,3 @@
-//Pinchas Plevinski
-//322211558
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
