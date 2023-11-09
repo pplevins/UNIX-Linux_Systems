@@ -1,6 +1,3 @@
-//Pinchas Plevinsi
-//322211558
-
 #include <pthread.h>
 #include <stdio.h>
 
