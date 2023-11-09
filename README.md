@@ -11,7 +11,7 @@ To introduce the concepts, design, and structure of the UNIX operating system. T
 4. Shell Programming: Redirection, variables, built-in commands.
 5. Shell Programming:  Bash: loops, functions and arrays.
 
-   **Part Two: C programming in UNIX**
+**Part Two: C programming in UNIX**
 6. Compiling C and Running C programs: arguments, stdio, exit codes, environment, libraries, make.
 7. File Accessing: open/close/read/write.
 8. Process Management: ps/kill, creation (system, fork, exec), signals, termination, wait, zombies.
