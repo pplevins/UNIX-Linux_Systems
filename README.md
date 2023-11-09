@@ -10,17 +10,17 @@ To introduce the concepts, design, and structure of the UNIX operating system. T
 3. Text Manipulation: grep, regular expressions.
 4. Shell Programming: Redirection, variables, built-in commands.
 5. Shell Programming:  Bash: loops, functions and arrays.
-**Part Two: C programming in UNIX**
-6. Compiling C and Running C programs: arguments, stdio, exit codes, environment, libraries, make.
-7. File Accessing: open/close/read/write.
-8. Process Management: ps/kill, creation (system, fork, exec), signals, termination, wait, zombies.
-9. InterProcess Communication: Pipes.
-10. Threads: creation, parameters, join, return values, attributes, cancellation, sync/async, critical section, thread data, cleanup.
-11. Process and Thread Synchronization: using mutexes and conditions on pthreads.
-12. Creating and Using thread pools.
+6. **Part Two: C programming in UNIX**
+7. Compiling C and Running C programs: arguments, stdio, exit codes, environment, libraries, make.
+8. File Accessing: open/close/read/write.
+9. Process Management: ps/kill, creation (system, fork, exec), signals, termination, wait, zombies.
+10. InterProcess Communication: Pipes.
+11. Threads: creation, parameters, join, return values, attributes, cancellation, sync/async, critical section, thread data, cleanup.
+12. Process and Thread Synchronization: using mutexes and conditions on pthreads.
+13. Creating and Using thread pools.
 Part Three: System Administration (not given in all years)
-13. Run levels and Systemd.
-14. inittab, Systemd, crontab, fstab, sudo, nice, .bashrc.
+14. Run levels and Systemd.
+15. inittab, Systemd, crontab, fstab, sudo, nice, .bashrc.
 
 ## Lab:
 1. 	Commands in UNIX (not handed it)
