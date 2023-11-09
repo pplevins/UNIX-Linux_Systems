@@ -1,6 +1,3 @@
-//Pinchas Plevinski
-//322211558
-
 //run this file (after compilation using gcc command) like this: ./lab4 grades.txt grade_listing.txt
 
 #include <stdio.h>
